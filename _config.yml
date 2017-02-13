@@ -33,9 +33,9 @@ defaults:
 paginate: 20
 
 #### Site
-title : Jekyll Jacman
-tagline: A fresh looking and responsive theme for Jekyll
-assets: /assets
+title : 覃小娜的博客~
+tagline:相信自己走的每一步，都是心灵的选择！
+assets: 学无止境
 baseurl: 
 
 #### Language
