@@ -1,0 +1,50 @@
+---
+title: 中文博客测试
+date: 2017-02-20 23:31:30
+tags:
+- 测试
+categories: 其他
+---
+
+This is a Chinese test post.
+前几天配置的监控都是对于单节点的，今天就集群进行监控配置。
+首先启动7个redis服务
+[图片]
+其中，7002，7003，7004为主，7000，7001，7005，7006为从。
+info命令查询不需要配置。可直接发送。
+1.redis-live集群配置
+可视化redis-live把配置文件改了，redis-live.conf如下所示。
+[图片]
+注意json格式，上图在{}之间应该加上英文逗号才可，存放信息要注意指定端口，不可和以上的端口一致，要不然./redis-monitor.py --duration=30     //启动监控，会报错。
+启动服务后，输入网址，具体操作见redis监控一。可见7个redis实例已经可以监控
+[图片]
+
+
+控制台返回的监控信息
+[图片]
+2.sentinel集群监控
+2.1 创建sentinel.conf（redis-3.2.4/下）配置文件
+port 26379     #当前Sentinel服务运行的端口
+# sentinel announce-ip <ip>
+# sentinel announce-port <port>
+dir /tmp        #Sentinel服务运行时使用的临时文件夹
+######### master001 #################################
+sentinel monitor master001 192.168.110.101 6379 2
+#Sentinel去监视一个名为master001的主redis实例，这个主实例的IP地址为本机地址192.168.110.101，端口号为6379，而将这个主实例判断为失效至少需要2个 Sentinel进程的同意，只要同意Sentinel的数量不达标，自动failover就不会执行。
+# sentinel auth-pass <master-name> <password>
+sentinel down-after-milliseconds master001 30000
+sentinel parallel-syncs master001 1
+sentinel failover-timeout master001 180000
+# sentinel notification-script <master-name> <script-path>
+# sentinel client-reconfig-script <master-name> <script-path>
+# 可以配置多个master节点
+2.2 创建3个sentinel.conf配置文件：sentinel.conf、sentinel1.conf、sentinel2.conf、并修改端口号分别为：26379、36379、46379并启动服务：
+redis-sentinel sentinel.conf
+redis-sentinel sentinel1.conf
+redis-sentinel sentinel2.conf
+[图片]
+sentinel2已经把主从信息检测出来
+[图片]
+到此已经把sentinel监控集群搭建起来。
+
+*From [有道云笔记 - 覃小娜](http://note.youdao.com/noteshare?id=7c29f2502eff6a2068603abc95fe56d0)*
