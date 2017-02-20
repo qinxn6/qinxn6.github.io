@@ -37,8 +37,8 @@ tagline: 相信自己走的每一步，都是心灵的选择！
 assets: 学无止境
 baseurl: 
 
-#### Language
-language: zh-CN    ## blog site languages: en, zh-CN, zh-TW
+#### Language en, zh-CN, zh-TW
+language: zh-TW
 
 #### Menu
 menu:
