@@ -40,7 +40,7 @@ baseurl:
 
 #### Language
 language: zh-CN    ## blog site languages: en, zh-CN, zh-TW
-
+encoding: UTF-8
 #### Menu
 menu:
   Home: /
