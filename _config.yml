@@ -95,7 +95,7 @@ author:
   weibo_verifier: 4d52a72a  ## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.
   tsina: 1005052348081885     ## e.g. 2176287895  Your weibo ID,It will be used in share button.
   douban:     ## e.g. wuchong1014 or your id for https://www.douban.com/people/wuchong1014
-  zhihu: https://www.zhihu.com/people/qinxn     ## e.g. jark  for http://www.zhihu.com/people/jark
+  zhihu: qinxn     ## e.g. jark  for http://www.zhihu.com/people/jark
   email: qinxn6@chinaunicom.cn      ## e.g. imjark@gmail.com
   twitter:    ## e.g. jarkwu for https://twitter.com/jarkwu
   github: https://qinxn6.github.io/
