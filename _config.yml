@@ -91,12 +91,12 @@ author:
   name: qxn      ## e.g. wuchong Author name
   intro_line1:  "Hello , I'm Qinxn in China."    ## your introduction on the bottom of the page
   intro_line2:  "This is my blog , believe it or not~"  ## the 2nd line
-  weibo:      ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895
-  weibo_verifier:  ## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.
-  tsina:      ## e.g. 2176287895  Your weibo ID,It will be used in share button.
+  weibo: http://weibo.com/p/1005052348081885      ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895，http://weibo.com/p/1005052348081885
+  weibo_verifier: 4d52a72a  ## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.
+  tsina: 1005052348081885     ## e.g. 2176287895  Your weibo ID,It will be used in share button.
   douban:     ## e.g. wuchong1014 or your id for https://www.douban.com/people/wuchong1014
-  zhihu:      ## e.g. jark  for http://www.zhihu.com/people/jark
-  email:      ## e.g. imjark@gmail.com
+  zhihu: https://www.zhihu.com/people/qinxn     ## e.g. jark  for http://www.zhihu.com/people/jark
+  email: qinxn6@chinaunicom.cn      ## e.g. imjark@gmail.com
   twitter:    ## e.g. jarkwu for https://twitter.com/jarkwu
   github: https://qinxn6.github.io/
   facebook:   ## e.g. imjark for https://facebook.com/imjark
