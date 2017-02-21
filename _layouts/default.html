@@ -1,9 +1,6 @@
 ---
 ---
 
-{% assign lang = site.data.languages[site.language] %}
-{% include layout.html %}
-
 <!-- 多说评论框 start -->
 	<div class="ds-thread" data-thread-key="[[ site.url ]]_[[ page.title ]]" data-title="[[ page.title ]]" data-url="[[ site.url ]]"></div>
 <!-- 多说评论框 end -->
@@ -20,3 +17,6 @@ var duoshuoQuery = {short_name:"qinxn6"};
 	})();
 	</script>
 <!-- 多说公共JS代码 end -->
+
+{% assign lang = site.data.languages[site.language] %}
+{% include layout.html %}
