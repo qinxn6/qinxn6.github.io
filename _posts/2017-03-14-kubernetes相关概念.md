@@ -1,6 +1,6 @@
 ---
 title: kubernetes相关概念
-tags:K8S
+tags: K8S
 categories: 技术
 ---
 1.背景：云计算平台
