@@ -8,6 +8,6 @@ http://blog.csdn.net/u012486840/article/details/53261564
 没有设置代理，直接yum update 等待更新（期间会有yes或者n的选项）
 su后用yum -y install docker,等待一会儿
 安装成功
-![](https://github.com/qinxn6/qinxn6.github.io/blob/master/image/7.png)
+![](https://qinxn6.github.io/image/7.png)
 启动后台服务
 [root@centos7 ~]# service docker start
