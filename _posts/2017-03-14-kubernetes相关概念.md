@@ -24,7 +24,7 @@ categories: 技术
 3.Kubernetes的核心概念
 ①.Pod
 　　运行于Node节点上，若干相关容器的组合。Pod内包含的容器运行在同一宿主机上，使用相同的网络命名空间、IP地址和端口，能够通过localhost进行通。Pod是Kurbernetes进行创建、调度和管理的最小单位，它提供了比容器更高层次的抽象，使得部署和管理更加灵活。一个Pod可以包含一个容器或者多个相关容器。
-②.Replication Controller
+②.Replication Controller（RC）
 　　Replication Controller用来管理Pod的副本，保证集群中存在指定数量的Pod副本。集群中副本的数量大于指定数量，则会停止指定数量之外的多余容器数量，反之，则会启动少于指定数量个数的容器，保证数量不变。Replication Controller是实现弹性伸缩、动态扩容和滚动升级的核心。
 ③.Service
 　　Service定义了Pod的逻辑集合和访问该集合的策略，是真实服务的抽象。Service提供了一个统一的服务访问入口以及服务代理和发现机制，用户不需要了解后台Pod是如何运行。
@@ -32,3 +32,13 @@ categories: 技术
 　　Kubernetes中的任意API对象都是通过Label进行标识，Label的实质是一系列的K/V键值对。Label是Replication Controller和Service运行的基础，二者通过Label来进行关联Node上运行的Pod。
 ⑤.Node
 　　Node是Kubernetes集群架构中运行Pod的服务节点（亦叫agent或minion）。Node是Kubernetes集群操作的单元，用来承载被分配Pod的运行，是Pod运行的宿主机。
+⑥.Master
+    指的是集群控制节点，每个k8s集群里需要有一个master节点来负责整个集群的管理和控制，基本上k8s所有的控制命令都是发给它，它来负责具体的执行过程，所有执行的命令基本都是在master节点上运行
+⑦.Deployment
+
+⑧.Horizontal Pod Autoscaler(HPA)
+⑨.Volume
+⑩.Persistent Volume
+11.Namespace
+12.Annotation
+13.小结
