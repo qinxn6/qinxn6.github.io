@@ -11,3 +11,8 @@ su后用yum -y install docker,等待一会儿
 ![](https://qinxn6.github.io/image/7.png)
 启动后台服务
 [root@centos7 ~]# service docker start
+下载官方的 CentOS 镜像到本地
+[root@localhost ~]# docker pull centos
+确认 CentOS 镜像已经被获取
+[root@localhost ~]# docker images centos
+http://www.linuxprobe.com/install-use-docker-in-centos7.html
